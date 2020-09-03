@@ -1,0 +1,60 @@
+
+
+
+TABLE DOKTER
+
+INSERT INTO `test_result_medigo_db`.`dokter` (`Nama`, `Gender`, `Domisili`, `Spesialisasi_id`) VALUES ('dr. Agieta Z, SpTHT-KL', 'Wanita', 'Jakarta Pusat', '5');
+INSERT INTO `test_result_medigo_db`.`dokter` (`Nama`, `Gender`, `Domisili`, `Spesialisasi_id`) VALUES ('dr. Adisti M R, SpTHT-KL(K)', 'Wanita', 'Jakarta Barat', '5');
+INSERT INTO `test_result_medigo_db`.`dokter` (`Nama`, `Gender`, `Domisili`, `Spesialisasi_id`) VALUES ('Dr.dr.Mirta H, SpTHT-KL(K)', 'Pria', 'Jakarta Selatan', '4');
+INSERT INTO `test_result_medigo_db`.`dokter` (`Nama`, `Gender`, `Domisili`, `Spesialisasi_id`) VALUES ('drg.abcde, Sp', 'Pria', 'Jakarta Selatan', '2');
+INSERT INTO `test_result_medigo_db`.`dokter` (`Nama`, `Gender`, `Domisili`, `Spesialisasi_id`) VALUES ('dr. Boy', 'Pria', 'Jakarta Timur', '1');
+
+
+
+
+
+
+
+TABLE RUMAH SAKIT
+
+INSERT INTO `test_result_medigo_db`.`rumahsakit` (`RumahSakit`, `AlamatRS`) VALUES ('RS Pusat Pertamina', 'Jl. Kyai Maja No.43, RT 4 RW 8, Gunung, Kebayoran Baru, Jakarta');
+INSERT INTO `test_result_medigo_db`.`rumahsakit` (`RumahSakit`, `AlamatRS`) VALUES ('Klinik Pertamedika Sinabung', 'Jl. Sinabung II, No.32 AF, Kebayoran Baru, RT.6/RW.5, Jakarta');
+INSERT INTO `test_result_medigo_db`.`rumahsakit` (`RumahSakit`, `AlamatRS`) VALUES ('RSCM', 'Jl. Sinabung II, No.32 AF, Kebayoran Baru, RT.6/RW.5, Jakarta');
+INSERT INTO `test_result_medigo_db`.`rumahsakit` (`RumahSakit`, `AlamatRS`) VALUES ('Klinik ABC', 'Jl. Kyai Maja No.43, RT 4 RW 8, Gunung, Kebayoran Baru, Jakarta Utara');
+
+
+
+
+
+
+TABLE PENYAKIT TERKAIT
+
+INSERT INTO `test_result_medigo_db`.`penyakitterkait` (`Penyakit`) VALUES ('Batuk Kronis');
+INSERT INTO `test_result_medigo_db`.`penyakitterkait` (`Penyakit`) VALUES ('Sinusitis Kronis');
+INSERT INTO `test_result_medigo_db`.`penyakitterkait` (`Penyakit`) VALUES ('Kesulitan Menelan');
+INSERT INTO `test_result_medigo_db`.`penyakitterkait` (`Penyakit`) VALUES ('Katarak');
+INSERT INTO `test_result_medigo_db`.`penyakitterkait` (`Penyakit`) VALUES ('Stroke');
+
+
+
+
+
+
+TABLE KEAHLIAN
+
+INSERT INTO `test_result_medigo_db`.`keahlian` (`Keahlian`) VALUES ('Bedah Sinus Endoskopi dan Nasal');
+INSERT INTO `test_result_medigo_db`.`keahlian` (`Keahlian`) VALUES ('Bedah Nasal Endoskopi');
+INSERT INTO `test_result_medigo_db`.`keahlian` (`Keahlian`) VALUES ('Timpanoplasti');
+INSERT INTO `test_result_medigo_db`.`keahlian` (`Keahlian`) VALUES ('Operasi Lasik');
+INSERT INTO `test_result_medigo_db`.`keahlian` (`Keahlian`) VALUES ('Operasi Jantung');
+
+
+
+
+TABLE KEAHLIAN
+
+INSERT INTO `test_result_medigo_db`.`spesialisasi` (`Spesialisasi`, `Deskripsi`) VALUES ('Dokter Umum', 'Praktisi umum');
+INSERT INTO `test_result_medigo_db`.`spesialisasi` (`Spesialisasi`, `Deskripsi`) VALUES ('Dokter Gigi', 'Praktisi gigi, rongga mulut dan rahang');
+INSERT INTO `test_result_medigo_db`.`spesialisasi` (`Spesialisasi`, `Deskripsi`) VALUES ('Dokter Spesialis Jantung', 'Kardiologi');
+INSERT INTO `test_result_medigo_db`.`spesialisasi` (`Spesialisasi`, `Deskripsi`) VALUES ('Dokter Spesialis Kulit dan Kelamin', 'Dermatologi');
+INSERT INTO `test_result_medigo_db`.`spesialisasi` (`Spesialisasi`, `Deskripsi`) VALUES ('Dokter Spesialis THT', 'Otolaringologi');
