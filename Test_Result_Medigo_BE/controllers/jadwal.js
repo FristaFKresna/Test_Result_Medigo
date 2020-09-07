@@ -1,9 +1,10 @@
 const db = require('./../database/mysql')
 
 const getAllJadwal = (req,res) => {
-    let sql = `select idDokter, idRS, BookingOnline, Hari, Jam, Nama, Gender, Domisili, RumahSakit, AlamatRS, Spesialisasi_id from jadwalpraktik as jp 
+    let sql = `select idDokter, idRS, BookingOnline, Hari, Jam, Nama, Gender, Domisili, RumahSakit, AlamatRS, Spesialisasi_id, Spesialisasi from jadwalpraktik as jp 
     join dokter as d on jp.idDokter = d.id
-    join rumahsakit as rs on jp.idRS = rs.id;`
+    join rumahsakit as rs on jp.idRS = rs.id
+    join spesialisasi as s on d.Spesialisasi_id = s.id;`
 
     db.query(sql, (err,result) => {
         try{
@@ -21,12 +22,14 @@ const getAllJadwal = (req,res) => {
     })
 }
 
+
 const getJadwalBySpesialisasi = (req,res) => {
     let spesialisasi_id = req.params.id
 
-    let sql = `select idDokter, idRS, BookingOnline, Hari, Jam, Nama, Gender, Domisili, RumahSakit, AlamatRS, Spesialisasi_id from jadwalpraktik as jp 
+    let sql = `select idDokter, idRS, BookingOnline, Hari, Jam, Nama, Gender, Domisili, RumahSakit, AlamatRS, Spesialisasi_id, Spesialisasi from jadwalpraktik as jp 
     join dokter as d on jp.idDokter = d.id
-    join rumahsakit as rs on jp.idRS = rs.id where Spesialisasi_id = ?;`
+    join rumahsakit as rs on jp.idRS = rs.id
+    join spesialisasi as s on d.Spesialisasi_id = s.id where Spesialisasi_id = ?;`
 
     db.query(sql, spesialisasi_id, (err,result) => {
         try{
@@ -47,9 +50,10 @@ const getJadwalBySpesialisasi = (req,res) => {
 const getJadwalByIdDokter = (req,res) => {
     let id_dokter = req.params.id
 
-    let sql = `select idDokter, idRS, BookingOnline, Hari, Jam, Nama, Gender, Domisili, RumahSakit, AlamatRS, Spesialisasi_id from jadwalpraktik as jp 
+    let sql = `select idDokter, idRS, BookingOnline, Hari, Jam, Nama, Gender, Domisili, RumahSakit, AlamatRS, Spesialisasi_id, Spesialisasi from jadwalpraktik as jp 
     join dokter as d on jp.idDokter = d.id
-    join rumahsakit as rs on jp.idRS = rs.id where idDokter = ?;`
+    join rumahsakit as rs on jp.idRS = rs.id
+    join spesialisasi as s on d.Spesialisasi_id = s.id where idDokter = ?;`
 
     db.query(sql, id_dokter, (err,result) => {
         try{

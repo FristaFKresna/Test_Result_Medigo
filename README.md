@@ -1,5 +1,10 @@
 ## Installation
 
+### Front End (ReactJS)
+- `cd test_result_medigo_web`
+- `npm install`
+- `npm start`
+
 ### Back End (NodeJS, ExpressJS)
 - `cd Test_Result_Medigo_BE`
 - `npm install`

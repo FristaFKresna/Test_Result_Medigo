@@ -1,8 +1,10 @@
 const express = require('express')
 const app = express()
 const port = 4000
+const cors = require('cors')
 
 app.use(express.json())
+app.use(cors())
 
 app.use('/dokter', require('./routers/doktor'))
 app.use('/jadwal', require('./routers/jadwal'))
